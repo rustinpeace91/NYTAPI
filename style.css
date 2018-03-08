@@ -1,0 +1,16 @@
+.jumbotron{
+    background-color:darkblue; 
+    text-align:center;
+    color:white; 
+
+}
+
+h1{
+    display:inline-block;
+    margin-top:30px;
+    margin-left:10px;
+}
+
+#newspapericon{
+    margin-bottom:20px;
+}
