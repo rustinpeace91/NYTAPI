@@ -34,7 +34,7 @@ Back-End Team
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -49,8 +49,13 @@ Back-End Team
                     </div>     
                     </div>
                     <script>
-                            
-                        var userInput;
+
+                        var userInput = "obama";
+                        var articleTitle;
+                        var articleAuthor;
+                        var articleSection;
+                        var articleDate;
+                        var webLink; 
                         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
                         url += '?' + $.param({
                         'api-key': "5985cb57a0fc41578e490ab5aee891df",
@@ -61,6 +66,14 @@ Back-End Team
                         method: 'GET',
                         }).done(function(result) {
                         console.log(result);
+                        i = 1;
+                                articleTitle = result.response.docs[i].headline.main;
+                                console.log(articleTitle);
+                        
+
+
+
+
                         }).fail(function(err) {
                         throw err;
                         })
