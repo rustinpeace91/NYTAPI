@@ -44,6 +44,24 @@ Back-End Team
                             <h1>New York Times Search</h1>
                     </div>     
                     </div>
+                    <script>
+                            
+                        var userInput;
+                        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+                        url += '?' + $.param({
+                        'api-key': "5985cb57a0fc41578e490ab5aee891df",
+                        'q': userInput
+                        });
+                        $.ajax({
+                        url: url,
+                        method: 'GET',
+                        }).done(function(result) {
+                        console.log(result);
+                        }).fail(function(err) {
+                        throw err;
+                        })
+
+                    </script>
         </body>
     
 </body>
